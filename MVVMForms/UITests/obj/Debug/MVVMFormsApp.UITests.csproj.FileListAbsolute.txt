@@ -1,0 +1,10 @@
+/Users/divikiranravela/Projects/MVVMForms/UITests/bin/Debug/MVVMFormsApp.UITests.dll
+/Users/divikiranravela/Projects/MVVMForms/UITests/bin/Debug/MVVMFormsApp.UITests.pdb
+/Users/divikiranravela/Projects/MVVMForms/UITests/bin/Debug/nunit.framework.dll
+/Users/divikiranravela/Projects/MVVMForms/UITests/bin/Debug/Xamarin.UITest.dll
+/Users/divikiranravela/Projects/MVVMForms/UITests/bin/Debug/nunit.framework.xml
+/Users/divikiranravela/Projects/MVVMForms/UITests/bin/Debug/Xamarin.UITest.xml
+/Users/divikiranravela/Projects/MVVMForms/UITests/obj/Debug/MVVMFormsApp.UITests.csprojResolveAssemblyReference.cache
+/Users/divikiranravela/Projects/MVVMForms/UITests/obj/Debug/MVVMFormsApp.UITests.csproj.CoreCompileInputs.cache
+/Users/divikiranravela/Projects/MVVMForms/UITests/obj/Debug/MVVMFormsApp.UITests.dll
+/Users/divikiranravela/Projects/MVVMForms/UITests/obj/Debug/MVVMFormsApp.UITests.pdb

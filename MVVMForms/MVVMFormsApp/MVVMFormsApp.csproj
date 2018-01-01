@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="App.xaml" />
+    <None Remove="MVVMFormsAppPage.xaml" />
+    <None Remove="Images\Cart.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="MVVMFormsAppPage.xaml.cs">
+      <DependentUpon>MVVMFormsAppPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
+    <PackageReference Include="Microsoft.NETCore.Portable.Compatibility" Version="1.0.1" />
+    <PackageReference Include="Unity" Version="5.5.0" />
+    <PackageReference Include="Xam.Plugins.Forms.Svg" Version="1.0.0.27" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MVVMForms\MVVMForms.csproj" />
+    <ProjectReference Include="..\MVVMFormsApp.Data\MVVMFormsApp.Data.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\" />
+    <Folder Include="PageModels\" />
+    <Folder Include="Models\" />
+    <Folder Include="Validations\" />
+    <Folder Include="Behaviors\" />
+    <Folder Include="Effects\" />
+    <Folder Include="Converters\" />
+    <Folder Include="Images\" />
+    <Folder Include="PageViewModels\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Models\Entities\" />
+  </ItemGroup>
+</Project>

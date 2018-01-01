@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{C2410169-DE81-4F8B-87D0-9FB6BD8E0B0F}|Default">
+  <MonoDevelop.Ide.ItemProperties.Clients.MVVMFormsApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.09C3BE5D-9652-444B-B03D-059858A59AF7">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.Clients.MVVMFormsApp.iOS>
+  <MonoDevelop.Ide.Workbench ActiveDocument="MVVMFormsApp/Pages/LandingPage.xaml">
+    <Files>
+      <File FileName="MVVMForms/NavigationService.cs" Line="65" Column="14" />
+      <File FileName="MVVMFormsApp/Pages/HomeTabbedPage.xaml" Line="12" Column="1" />
+      <File FileName="MVVMFormsApp/Pages/LandingPage.xaml" Line="22" Column="44" />
+      <File FileName="MVVMFormsApp/Pages/ProductDetailsPage.xaml" Line="95" Column="17" />
+      <File FileName="MVVMFormsApp/PageModels/LandingPageModel.cs" Line="85" Column="1" />
+      <File FileName="MVVMForms/EventToCommandBehavior.cs" Line="131" Column="1" />
+      <File FileName="MVVMForms/BasePage.cs" Line="15" Column="10" />
+      <File FileName="iOS/Main.cs" Line="11" Column="6" />
+      <File FileName="MVVMFormsApp/Pages/DetailsPage.xaml.cs" Line="10" Column="10" />
+      <File FileName="MVVMForms/BasePageModel.cs" Line="9" Column="22" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/divikiranravela/Projects/MVVMForms/MVVMForms/NavigationService.cs" relfile="MVVMForms/NavigationService.cs" line="32" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Clients.MVVMFormsApp.Droid PreferredExecutionTarget="Android.AVD_for_Nexus_5_by_Google" />
+  <MultiItemStartupConfigurations />
+</Properties>

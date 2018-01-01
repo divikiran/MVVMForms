@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<base:BasePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="MVVMFormsApp.Pages.DetailsPage" xmlns:base="clr-namespace:MVVMForms;assembly=MVVMForms" 
+    xmlns:behaviors="clr-namespace:MVVMForms;assembly=MVVMForms" 
+    xmlns:controls="clr-namespace:MVVMFormsApp.Controls;assembly=MVVMFormsApp" 
+    Title="{Binding Title}"
+    base:MvvmFormsServiceLocator.AutoWireViewModel="true">
+    <base:BasePage.Content>
+        <StackLayout>
+            <Image Source="{Binding ImageUrl}" />
+            <Label Text="{Binding Description}" VerticalOptions="Center" HorizontalOptions="Center" />
+        </StackLayout>
+
+<!--        <controls:RepeaterView ItemsSource="{Binding Dates}" x:Name="DateRepeaterView">
+            <controls:RepeaterView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=BindingContext.DateTapped, Source={x:Reference DateCellName}}" CommandParameter="{Binding DateTimePassed}" />
+                        </StackLayout.GestureRecognizers>
+                        <Label Text="{Binding Date}" />
+                    </StackLayout>
+                </DataTemplate>
+            </controls:RepeaterView.ItemTemplate>
+        </controls:RepeaterView>-->
+
+        
+    </base:BasePage.Content>
+</base:BasePage>

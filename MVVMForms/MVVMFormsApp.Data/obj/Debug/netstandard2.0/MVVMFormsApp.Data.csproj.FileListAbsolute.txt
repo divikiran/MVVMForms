@@ -1,0 +1,9 @@
+/Users/divikiranravela/Projects/MVVMForms/MVVMFormsApp.Data/bin/Debug/netstandard2.0/MVVMFormsApp.Data.deps.json
+/Users/divikiranravela/Projects/MVVMForms/MVVMFormsApp.Data/bin/Debug/netstandard2.0/MVVMFormsApp.Data.dll
+/Users/divikiranravela/Projects/MVVMForms/MVVMFormsApp.Data/bin/Debug/netstandard2.0/MVVMFormsApp.Data.pdb
+/Users/divikiranravela/Projects/MVVMForms/MVVMFormsApp.Data/obj/Debug/netstandard2.0/MVVMFormsApp.Data.csprojResolveAssemblyReference.cache
+/Users/divikiranravela/Projects/MVVMForms/MVVMFormsApp.Data/obj/Debug/netstandard2.0/MVVMFormsApp.Data.csproj.CoreCompileInputs.cache
+/Users/divikiranravela/Projects/MVVMForms/MVVMFormsApp.Data/obj/Debug/netstandard2.0/MVVMFormsApp.Data.AssemblyInfoInputs.cache
+/Users/divikiranravela/Projects/MVVMForms/MVVMFormsApp.Data/obj/Debug/netstandard2.0/MVVMFormsApp.Data.AssemblyInfo.cs
+/Users/divikiranravela/Projects/MVVMForms/MVVMFormsApp.Data/obj/Debug/netstandard2.0/MVVMFormsApp.Data.dll
+/Users/divikiranravela/Projects/MVVMForms/MVVMFormsApp.Data/obj/Debug/netstandard2.0/MVVMFormsApp.Data.pdb

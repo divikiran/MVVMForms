@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<base:BasePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MVVMFormsApp.Pages.ProductDetailsPage" xmlns:base="clr-namespace:MVVMForms;assembly=MVVMForms" xmlns:behaviors="clr-namespace:MVVMForms;assembly=MVVMForms" xmlns:localbehaviors="clr-namespace:MVVMFormsApp.Behaviors;assembly=MVVMFormsApp" xmlns:controls="clr-namespace:MVVMFormsApp.Controls;assembly=MVVMFormsApp" Title="{Binding Name}" base:MvvmFormsServiceLocator.AutoWireViewModel="true">
+    <base:BasePage.Content>
+        <StackLayout x:Name="ProductDetailsStackLayout">
+            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20*" />
+                    <RowDefinition Height="75*" />
+                    <RowDefinition Height="5*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Aspect="AspectFit" Grid.Row="0" Grid.Column="0" Source="{Binding ImageUrl}" />
+                <StackLayout Grid.Row="1" Grid.Column="0" HeightRequest="{Binding DeviceHeight}" Padding="5" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <ScrollView x:Name="ProductScrollView">
+                        <controls:RepeaterView ItemsSource="{Binding Products}" Orientation="Vertical">
+                            <controls:RepeaterView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackLayout Grid.Row="0" Grid.Column="0">
+                                                <Image Aspect="AspectFit" HeightRequest="150" WidthRequest="150" Source="{Binding ImageUrl}" />
+                                            </StackLayout>
+                                            <StackLayout Grid.Row="0" Grid.Column="1">
+                                                <Label Text="{Binding Description}" />
+                                                <Grid VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="30*" />
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="25*" />
+                                                        <ColumnDefinition Width="75*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <StackLayout Grid.Row="0" Grid.Column="0">
+                                                        <Image HeightRequest="30" WidthRequest="30" Source="{Binding IsFavorite, Converter={StaticResource favoriteImageConverter}}" />
+                                                        <StackLayout.GestureRecognizers>
+                                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.MakeFavoriteCommand, Source={x:Reference ProductDetailsStackLayout}}" CommandParameter="{Binding .}"/>
+                                                        </StackLayout.GestureRecognizers>
+                                                    </StackLayout>
+                                                    <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                                        <Grid HorizontalOptions="FillAndExpand">
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="*" />
+                                                            </Grid.RowDefinitions>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="*" />
+                                                                <ColumnDefinition Width="*" />
+                                                                <ColumnDefinition Width="*" />
+                                                            </Grid.ColumnDefinitions>
+                                                            <StackLayout Grid.Row="0" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Start">
+                                                                <Image Source="Plus" HeightRequest="25" WidthRequest="25" />
+                                                                <StackLayout.GestureRecognizers>
+                                                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.AddToCartCommand, Source={x:Reference ProductDetailsStackLayout}}" CommandParameter="{Binding .}" />
+                                                                </StackLayout.GestureRecognizers>
+                                                            </StackLayout>
+                                                            <RelativeLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center">
+                                                                <Image Source="Cart" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}" />
+                                                                <StackLayout HorizontalOptions="Center" VerticalOptions="Center" RelativeLayout.XConstraint="10" RelativeLayout.YConstraint="-10" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                                                                    <!--<Label Text="{Binding CartCount}" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />-->
+                                                                    <controls:RoundLabel CornerRadius="7" HeightRequest="20" WidthRequest="20" Text="{Binding CartCount}" BackgroundColor="#ED1C23" YAlign="Center" XAlign="Center" TextColor="White" />
+                                                                </StackLayout>
+                                                            </RelativeLayout>
+                                                            <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End">
+                                                                <Image Source="Minus" HeightRequest="25" WidthRequest="25" />
+                                                                <StackLayout.GestureRecognizers>
+                                                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.RemoveFromCartCommand, Source={x:Reference ProductDetailsStackLayout}}" CommandParameter="{Binding .}" />
+                                                                </StackLayout.GestureRecognizers>
+                                                            </StackLayout>
+                                                        </Grid>
+                                                    </StackLayout>
+                                                </Grid>
+                                            </StackLayout>
+                                        </Grid>
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.ProductCommand, Source={x:Reference ProductDetailsStackLayout}}" CommandParameter="{Binding .}" />
+                                        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </controls:RepeaterView.ItemTemplate>
+                        </controls:RepeaterView>
+                    </ScrollView>
+                </StackLayout>
+                <Button Grid.Row="2" Grid.Column="0" Text="Add to Card" HorizontalOptions="FillAndExpand" />
+            </Grid>
+        </StackLayout>
+    </base:BasePage.Content>
+</base:BasePage>
